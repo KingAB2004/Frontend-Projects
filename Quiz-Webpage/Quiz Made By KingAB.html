@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<!-- saved from url=(0058)file:///C:/Users/lenovo/Desktop/arpit/coding/quizfull.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Made By KingAB</title>
+    <style>
+
+*{
+    margin: 0%;
+    padding: 0%;
+ 
+   
+}
+body{
+
+    background-image: url("./triangles-1430105_1920.png");
+}
+
+#startquiz{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10%;
+  
+}
+.startingbuttons{
+    font-size: xx-large;
+    height: 10%;
+    width: 30%;
+    border-radius: 10vh;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-color: rgba(0, 0, 0, 0.437);
+}
+#whyfucker{
+    display: flex;
+    width: 35%;
+   justify-content: center;
+    flex-wrap: wrap;
+    
+}
+#whyfuckerf{
+    display: flex;
+    justify-content: center;
+  
+    height: 100vh;
+    background-image: url("triangles-1430105_1920.png");
+    display: none;
+}
+#backtomainbutton{
+    height: 10%;
+    width: 30vb;
+    background-color: black;
+    color: white;
+}
+#hide{
+    display: none;
+}
+
+/*  */
+/*  */
+#quizinfo{
+    /* background-image: url("/triangles-1430105_1920.png"); */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    flex-wrap: wrap;
+    position: relative;
+    left: 90vb;
+    display: none;
+}
+.options{
+    height: 5vh;
+    width: 50vb;
+    font-size: large;
+    /* background-image: url("/triangles-1430105_1920.png"); */
+}
+.text{
+    font-size: xx-large;
+    color: rgb(62, 1, 1);
+}
+#finalstartbutton{
+    height: 5vh;
+    width: 35vb;
+    border-radius: 3vh;
+    font-weight: bold;
+    /* background-image: url("/triangles-1430105_1920.png"); */
+}
+
+
+
+
+#quizinterface{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    width: 50vh;
+    position: relative;
+    left: 40%;
+    display: none;
+}
+#questions{
+    
+    width: 150vb;
+    font-size: xx-large;
+    text-transform: capitalize;
+}
+input.checkbox {
+    width: 40px;
+    height: 40px;
+}
+.opt{
+    display: flex;
+    font-size: x-large;
+    position: relative;
+    top: -10vh;
+
+    margin-bottom: 3vh;
+    gap: 2vh;
+    
+}
+#timer{
+    position: relative;
+    left: 90%;
+    background-color: aliceblue;
+    height: 4vh;
+    width: 40vh;
+    text-align: center;
+}
+
+#resultinterface{
+    display: none;
+}
+
+
+#upperhalf{
+    height: 15vh;
+    width: 30vh;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom: 2px solid black;
+    background-color: aqua;
+text-align: center;
+font-size: 10vh;
+position: relative;
+    left: 45vb;
+    top: 5vh;
+
+}
+#lowerhalf{
+    height: 15vh;
+    width: 30vh;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background-color: aqua;
+    text-align: center;
+    font-size: 10vh;
+    position: relative;
+    left: 45vb;
+    top: 5vh;
+}
+
+#passed{
+    font-size: 15vh;
+    text-align: center;
+
+}
+#marks{
+    display: flex;
+    justify-content: center;
+    width: 30vh;
+    flex-wrap: wrap;
+    position: relative;
+    left: 60vb;
+    top: 10vh;
+}
+.resultbutton{
+    height: 4vh;
+    width: 20vh;
+    border-radius: 2vh;
+    font-weight: bold;
+    border: none;
+    position: relative;
+    left: 30vb;
+    top: 15vh;
+}
+#retest{
+    position: relative;
+    top: 11vh;
+    left:60vh;
+}
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="startquiz">
+        <button id="wanttoplay" class="startingbuttons">Want to play a Quiz</button>
+        <button id="dont" class="startingbuttons">Don't want to play</button>
+        </div>
+        <div id="whyfuckerf" class="hide">
+    
+            <div id="whyfucker">
+                <div>
+                    <h1>THEN PLEASE,</h1>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <h1>Email me your experiance and some suggestions</h1>
+                </div>
+        <div id="backtomain">
+            <button id="backtomainbutton">BACK</button>
+        </div>
+    </div>
+    </div>
+    
+    
+    
+    
+    <div id="quizinfo">
+        <div id="topic" style="position: relative;
+        top: 10vh;">
+            <p class="text">Topic:</p>
+            <select id="whichtopic" value="whichtopic" class="options">
+            <option value="selectoption">Select Topic</option>
+                <option value="9">General Knowledge</option>
+                <option value="10">Entertainment: Books</option>
+                <option value="11">Entertainment: Film</option>
+                <option value="12">Entertainment: Music</option>
+                <option value="13">Entertainment: Television</option>
+                <option value="14">Entertainment: Video Games</option>
+                <option value="15">Entertainment: Board Games</option>
+                <option value="16">Science &amp; Nature</option>
+                <option value="17">Science: Computers</option>
+                <option value="18">Science: Mathematics</option>
+                <option value="19">Mythology</option>
+                <option value="20">Sports</option>
+                <option value="21">Entertainment: Television</option>
+                <option value="22">Geography</option>
+                <option value="23">History</option>
+                <option value="24">Politics</option>
+                <option value="25">Art</option>
+                <option value="26">Celebrities</option>
+                <option value="27">Animals</option>
+                <option value="28">Vehicles</option>
+                <option value="29">Entertainment: Comics</option>
+                <option value="30">Science: Gadgets</option>
+                <option value="31">Entertainment: Japanese Anime &amp; Manga</option>
+                <option value="32">Entertainment: Cartoon &amp; Animations</option>
+    </select>
+       
+    </div>
+    <div id="difficultylevel">
+        <p class="text">Difficulty Level:</p>
+            <select id="difficult" value="difficulty" class="options">
+            <option value="Selectdifficulty">Select Difficulty</option>
+            <option value="easy">EASY</option>
+            <option value="medium">MEDIUM</option>
+            <option value="hard">HARD</option>
+        </select>
+        </div>
+        <div id="number" style="position: relative;
+        top:-10vh;">
+            <p class="text">Number of Questions:</p>
+            <select id="Number" value="Number" class="options">
+                <option id="10">10</option>
+                <option id="20">20</option>
+                <option id="30">30</option>
+            </select>
+        </div>
+        <div id="finalstart" style="position: relative;
+        top: -10vh;">
+            <button id="finalstartbutton">Start the Quiz</button>
+        </div>
+    </div>
+    
+    
+    
+    <div id="quizinterface">
+    <div id="timer">
+        <h2 id="timeleft">Time Left : 10</h2>
+    </div>
+        <div id="question">
+            <h1 id="questions"></h1>
+             </div>
+             <div id="checkboxes">
+                <div class="opt">
+    
+                    <input type="radio" class="checkbox" value="0"><p id="option1" class="checkoption"></p>
+                </div>
+                <div class="opt">
+                    
+                    <input type="radio" class="checkbox" value="1"><p id="option2" class="checkoption"></p>
+                </div>
+                <div class="opt">
+                    
+                    <input type="radio" class="checkbox" value="2"><p id="option3" class="checkoption"></p>
+                </div>
+                <div class="opt">
+                    
+                    <input type="radio" class="checkbox" value="3"><p id="option4" class="checkoption"></p>
+                </div>
+             </div>
+    </div>
+    
+    
+    
+    
+    <div id="resultinterface">
+    <h1 id="passed">Passed</h1>
+    
+    <div id="marks">
+    <h1>
+       <u>MARKS</u>
+    </h1>
+    <div id="upperhalf">
+        <p id="upperscore"></p>
+    </div>
+    <div id="lowerhalf">
+        <p id="lowerscore"></p>
+    </div>
+    <button id="mainmenu" class="resultbutton">Main Menu</button>
+    <button id="retest" class="resultbutton">Take Restest</button>
+    </div>
+    
+    </div>
+    <script>
+      let starttoplay=document.querySelector("#wanttoplay");
+let startquiz=document.querySelector("#startquiz");
+let fuckerf=document.querySelector("#whyfuckerf");
+let quizinfo=document.querySelector("#quizinfo");
+let finalstartbutton=document.querySelector("#finalstartbutton");
+let quizinterface=document.querySelector("#quizinterface");
+let mainmenu=document.querySelector("#mainmenu");
+let retest=document.querySelector("#retest");
+let resultinterface=document.querySelector("#resultinterface");
+starttoplay.addEventListener("click" ,()=>{
+startquiz.style.display="none";
+quizinfo.style.display="flex";
+})
+let dontquiz=document.querySelector("#dont");
+dontquiz.addEventListener("click" ,()=>{
+    startquiz.style.display="none";
+   fuckerf.style.display="flex";
+   numberofquestions.value=30;
+})
+let backtomain=document.querySelector("#backtomainbutton");
+backtomain.addEventListener("click" ,()=>{
+    fuckerf.style.display="none";
+    startquiz.style.display="flex";
+})
+finalstartbutton.addEventListener("click" ,()=>{
+    quizinfo.style.display="none";
+    quizinterface.style.display="flex";
+   k=0;
+    quiz(k);
+    timer();
+
+})
+mainmenu.addEventListener("click" ,()=>{
+    startquiz.style.display="flex";
+    resultinterface.style.display="none";
+
+})
+retest.addEventListener("click" ,()=>{
+resultinterface.style.display="none";
+quizinterface.style.display="flex";
+k=0;
+quiz(k);
+timer();
+})
+// 
+// 
+// 
+// 
+let question=document.querySelector("#questions");
+let difficultylevel=document.querySelector("#difficult");
+let topic=document.querySelector("#whichtopic");
+let numberofquestions=document.querySelector("#Number");
+var checkoption=document.querySelectorAll(".checkoption");
+let checkbox=document.querySelectorAll(".checkbox");
+let scoreboard=document.querySelector("#upperscore");
+let total=document.querySelector("#lowerscore");
+let passed=document.querySelector("#passed");
+let k=0;
+let ans;
+let data;
+const quiz=async(k)=>{
+    let url=`https://opentdb.com/api.php?amount=${numberofquestions.value}&category=${topic.value}&difficulty=${difficultylevel.value}&type=multiple`;
+    let promise= await fetch(url);
+     data=await promise.json();
+    for(k=0;k<10;k++)
+    {
+
+        data.results[k].question = data.results[k].question.replaceAll("&quot", "");
+        data.results[k].question = data.results[k].question.replaceAll(";", "");
+        data.results[k].question = data.results[k].question.replaceAll("&#039", "");
+        data.results[k].correct_answer=data.results[k].correct_answer.replaceAll("&quot","");
+        data.results[k].correct_answer=data.results[k].correct_answer.replaceAll(";","");
+        data.results[k].correct_answer=data.results[k].correct_answer.replaceAll("&#039","");
+        for(let i=0;i<3;i++)
+        {
+            data.results[k].incorrect_answers[i]=data.results[k].incorrect_answers[i].replaceAll("&quot","");
+        data.results[k].incorrect_answers[i]=data.results[k].incorrect_answers[i].replaceAll(";","");
+        data.results[k].incorrect_answers[i]=data.results[k].incorrect_answers[i].replaceAll("&#039","");
+
+        }
+    }
+    k=0;
+    question.innerText=`Q${k+1}.${data.results[k].question}`;
+
+  
+    
+    let i=0;
+    let j=0;
+             let no= Math.floor(Math.random()*4)+1;
+       for(opton of checkoption)
+       {
+        i++;
+        if(i==no)
+         opton.innerText=data.results[k].correct_answer;
+        else
+        {
+
+            opton.innerText=data.results[k].incorrect_answers[j];
+        j++;}
+       }
+       ans=data.results[k].correct_answer;
+       console.log(data);
+}
+
+
+let score=0;
+for(let check of checkbox)
+{
+    check.addEventListener("click" ,()=>{
+        ans=data.results[k].correct_answer;
+        k++;
+        check.checked=false;
+        if(numberofquestions.value!=k){
+            
+            console.log(ans);
+            console.log(checkoption[check.value].innerText);
+            if(checkoption[check.value].innerText==ans)
+            {
+                
+                score++;
+            }
+            question.innerText=`Q${k+1}.${data.results[k].question}`;
+            
+            
+            let i=0;
+            let j=0;
+            let no= Math.floor(Math.random()*4)+1;
+            for(opton of checkoption)
+            {
+                i++;
+                if(i==no)
+                opton.innerText=data.results[k].correct_answer;
+                else
+                {
+                    
+                    opton.innerText=data.results[k].incorrect_answers[j];
+                    j++;}
+                }
+                
+            }
+    else{
+
+resultinterface.style.display="block";
+quizinterface.style.display="none";
+scoreboard.innerText=score;
+if(score<Math.floor(numberofquestions.value/3))
+{
+    passed.innerText="Failed";
+}
+else{
+    passed.innerText="Passed";
+}
+
+score=0;
+total.innerText=numberofquestions.value;
+
+    }
+    console.log(score);
+    
+    timer();
+
+        
+    })
+}
+// 
+// 
+// 
+// 
+let timeleft=document.querySelector("#timeleft");
+
+function timer(){
+ let time=11;
+ let timer =setInterval(()=>{
+     time--;
+     if(time<0)
+     {
+         time=11;
+         
+        k++;
+        if(numberofquestions.value!=k){
+
+            question.innerText=`Q${k+1}.${data.results[k].question}`;
+
+               
+            let i=0;
+            let j=0;
+                     let no= Math.floor(Math.random()*4)+1;
+               for(opton of checkoption)
+               {
+                i++;
+                if(i==no)
+                 opton.innerText=data.results[k].correct_answer;
+                else
+                {
+        
+                    opton.innerText=data.results[k].incorrect_answers[j];
+                j++;}
+               }  
+               timer();
+            }
+            else{
+                
+                resultinterface.style.display="block";
+                quizinterface.style.display="none";
+                scoreboard.innerText=score;
+                k=0;
+                if(score<Math.floor(numberofquestions.value/3))
+                {
+                    passed.innerText="Failed";
+                }
+                else{
+                    passed.innerText="Passed";
+                }
+                
+                score=0;
+                total.innerText=numberofquestions.value;
+                clearInterval(timer);
+            }
+        }
+        timeleft.innerText=`Time Left : ${time}`;
+        for(let check of checkbox)
+{
+    check.addEventListener("click" ,()=>{
+        clearInterval(timer);
+    })
+    }
+    finalstartbutton.addEventListener("click" ,()=>{
+        clearInterval(timer);
+    })
+    retest.addEventListener("click" ,()=>{
+        clearInterval(timer);
+    })
+}
+    ,1000);
+}
+
+
+
+
+
+
+
+    </script>
+
+</body></html>
